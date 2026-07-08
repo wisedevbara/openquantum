@@ -1,0 +1,23 @@
+// Email Subscriber Schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model EmailSubscriber {
+  id          String   @id @default(uuid())
+  email       String   @unique
+  name        String?
+  source      String   @default("coming-soon")
+  preferences Json?
+  confirmed   Boolean  @default(false)
+  honeypot    String?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("email_subscribers")
+}

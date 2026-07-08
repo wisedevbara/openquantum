@@ -1,0 +1,6 @@
+# https://www.openquantum.id/robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://openquantum.id/sitemap.xml

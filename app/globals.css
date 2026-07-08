@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  /* Quantum Color Palette */
+  --deep-space-1: #030712;
+  --deep-space-2: #0F0A2A;
+  --deep-space-3: #1B0B3B;
+  --electro-gold: #FBBF24;
+  --electro-gold-dark: #F59E0B;
+  --quantum-cyan: #22D3EE;
+  --quantum-cyan-dark: #06B6D4;
+  --neon-violet: #8B5CF6;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, var(--deep-space-1) 0%, var(--deep-space-2) 50%, var(--deep-space-3) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Selection Colors */
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: white;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep-space-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-violet);
+  border-radius: 3px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
