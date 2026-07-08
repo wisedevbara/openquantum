@@ -39,6 +39,15 @@ body {
   color: white;
 }
 
+/* Font Utility Classes */
+.font-orbitron {
+  font-family: var(--font-orbitron), 'Orbitron', sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 6px;
