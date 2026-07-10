@@ -4,11 +4,11 @@
   </a>
 </p>
 
-<h1 align="center">⚛️ OpenQuantum</h1>
+<h1 align="center">⚛️ OpenQuantum.id</h1>
 
 <p align="center">
-  <strong>Komputasi Kuantum untuk Masa Depan</strong><br>
-  <em>Enkripsi tahan kuantum. Prosesor superposisi.</em>
+  <strong>Membangun Masa Depan Komputasi Kuantum Indonesia</strong><br>
+  <em>Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.</em>
 </p>
 
 <p align="center">
@@ -31,15 +31,15 @@
 
 ## 📖 Tentang
 
-**OpenQuantum** adalah platform yang membawa enkripsi tahan kuantum dan pemrosesan data superposisi ke dalam genggaman Anda. Platform ini dirancang untuk menjadi fondasi bagi aplikasi komputasi kuantum di masa depan.
+**OpenQuantum.id** adalah platform komputasi kuantum Indonesia yang membawa enkripsi tahan kuantum dan pemrosesan data superposisi ke dalam genggaman Anda. Kami membangun fondasi bagi masa depan aplikasi kuantum — dimulai dari Indonesia, untuk kontribusi global.
 
-### ✨ Fitur Utama
+### ✨ Yang Kami Bangun
 
-- 🔐 **Enkripsi Tahan Kuantum** — Algoritma kriptografi post-quantum yang aman
-- ⚛️ **Simulasi Kuantum** — Visualisasi qubit dan operasi kuantum
-- 🌐 **Web Interface** — Aksesibel dari browser tanpa instalasi
-- 🔒 **Security First** — CSP headers, rate limiting, input sanitization
-- 📱 **Responsive Design** — Tampilan optimal di semua perangkat
+- 🔐 **Enkripsi Tahan Kuantum** — Algoritma kriptografi post-quantum yang aman dan andal
+- ⚛️ **Simulasi Kuantum** — Visualisasi qubit dan operasi kuantum secara interaktif
+- 🌐 **Web Interface** — Aksesibel dari browser, tanpa perlu instalasi rumit
+- 🔒 **Security First** — CSP headers, rate limiting, dan sanitasi input menyeluruh
+- 📱 **Responsive Design** — Tampilan optimal di desktop, tablet, dan mobile
 
 ## 🛠️ Tech Stack
 
