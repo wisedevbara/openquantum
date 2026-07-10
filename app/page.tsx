@@ -68,18 +68,6 @@ export default function Home() {
             Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.
           </p>
 
-          {/* Tech badges */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-            {['Next.js 15', 'React 19', 'Tailwind CSS 4'].map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-cherenkov-mid/20 bg-cherenkov-deep/30 px-3 py-1 text-xs font-medium text-cherenkov-bright"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-
           {/* Countdown Timer */}
           <div className="mt-12 w-full max-w-3xl">
             <CountdownTimer />
