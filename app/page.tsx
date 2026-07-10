@@ -2,16 +2,6 @@
 
 import dynamic from 'next/dynamic';
 import CountdownTimer from '@/components/CountdownTimer';
-import PillarCard from '@/components/PillarCard';
-import EmailSignup from '@/components/EmailSignup';
-import Footer from '@/components/Footer';
-import CookieConsent from '@/components/CookieConsent';
-import {
-  SuperpositionIcon,
-  EntanglementIcon,
-  EncryptionIcon,
-  DecoherenceIcon,
-} from '@/components/QuantumIcons';
 
 // Dynamic imports for heavy components (no SSR needed)
 const QuantumParticles = dynamic(() => import('@/components/QuantumParticles'), {
@@ -73,90 +63,7 @@ export default function Home() {
             <CountdownTimer />
           </div>
         </section>
-
-        {/* 4 Pillars Section */}
-        <section className="mt-20 w-full max-w-5xl">
-          <h2 className="font-display mb-4 text-center text-2xl font-bold text-photon sm:text-3xl">
-            Pilar Teknologi Kami
-          </h2>
-          <p className="font-body mx-auto mb-10 max-w-xl text-center text-sm text-photon/40 sm:text-base">
-            Empat pilar utama yang menjadi fondasi platform kami — dirancang untuk komputasi kuantum yang nyata dan aplikatif.
-          </p>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <PillarCard
-              icon={<SuperpositionIcon className="h-12 w-12" />}
-              title="Superposisi"
-              description="Banyak kemungkinan sekaligus. Sebuah qubit bisa berada dalam banyak state secara bersamaan — membuka potensi komputasi yang tak terbatas."
-            />
-            <PillarCard
-              icon={<EntanglementIcon className="h-12 w-12" />}
-              title="Entanglement"
-              description="Koneksi instan tanpa jarak. Dua qubit yang terentangle saling mempengaruhi secara instan — fondasi komunikasi kuantum masa depan."
-            />
-            <PillarCard
-              icon={<EncryptionIcon className="h-12 w-12" />}
-              title="Enkripsi Kuantum"
-              description="Keamanan data generasi berikutnya. Enkripsi post-kuantum yang tahan serangan dari komputer kuantum — melindungi data Anda di masa depan."
-            />
-            <PillarCard
-              icon={<DecoherenceIcon className="h-12 w-12" />}
-              title="Dekohorensi"
-              description="Menuju stabilitas absolut. Kami menaklukkan dekohorensi untuk memastikan sistem kuantum tetap stabil dan reliabel dalam produksi."
-            />
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section className="mt-24 w-full max-w-4xl">
-          <div className="card-surface rounded-3xl p-8 sm:p-12">
-            <h2 className="font-display mb-6 text-center text-2xl font-bold text-photon sm:text-3xl">
-              Tentang OpenQuantum.id
-            </h2>
-            <div className="space-y-4 text-center">
-              <p className="font-body text-base leading-relaxed text-photon/70 sm:text-lg">
-                OpenQuantum.id adalah platform komputasi kuantum Indonesia yang berfokus pada riset dan pengembangan teknologi kuantum yang aplikatif.
-              </p>
-              <p className="font-body text-base leading-relaxed text-photon/40 sm:text-lg">
-                Kami membangun solusi enkripsi tahan kuantum dan simulasi superposisi — dimulai dari Indonesia, untuk kontribusi global. Misi kami adalah membuat teknologi kuantum lebih mudah diakses oleh developer, peneliti, dan organisasi di seluruh dunia.
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
-                {[
-                  'Kriptografi Post-Kuantum',
-                  'Simulasi Kuantum',
-                  'Open Source',
-                  'Buatan Indonesia',
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-cherenkov-mid/20 bg-cherenkov-deep/30 px-4 py-1.5 text-xs font-medium text-cherenkov-bright sm:text-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="mt-20 w-full max-w-2xl text-center">
-          <h2 className="font-display mb-4 text-2xl font-bold text-photon sm:text-3xl">
-            Siap Bergabung?
-          </h2>
-          <p className="font-body mb-8 text-base text-photon/40 sm:text-lg">
-            Daftar sekarang dan jadilah yang pertama mengetahui saat platform kami resmi diluncurkan. Bersama, kita bangun masa depan komputasi kuantum Indonesia!
-          </p>
-          <EmailSignup />
-        </section>
       </main>
-
-      {/* Footer */}
-      <div className="relative z-10">
-        <Footer />
-      </div>
-
-      {/* Cookie Consent */}
-      <CookieConsent />
     </>
   );
 }
