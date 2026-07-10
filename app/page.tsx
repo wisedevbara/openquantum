@@ -86,11 +86,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Email Signup Section */}
-        <section className="mt-16 w-full">
-          <EmailSignup />
-        </section>
-
         {/* 4 Pillars Section */}
         <section className="mt-20 w-full max-w-5xl">
           <h2 className="font-display mb-4 text-center text-2xl font-bold text-photon sm:text-3xl">
