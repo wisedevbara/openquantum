@@ -40,3 +40,11 @@ backups/
 # caddy
 /var/log/caddy/
 .github/workflows/
+
+# Security - never commit credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.secret
