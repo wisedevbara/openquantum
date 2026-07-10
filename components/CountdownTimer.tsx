@@ -50,7 +50,7 @@ function TimeUnitCard({ value, label, prevValue }: TimeUnitCardProps) {
     <div className="relative flex flex-col items-center">
       {/* Bloch Sphere container with rotating border */}
       <div
-        className="relative flex h-28 w-28 items-center justify-center rounded-full sm:h-32 sm:w-32"
+        className="relative flex h-21 w-21 items-center justify-center rounded-full sm:h-24 sm:w-24"
         style={{
           background:
             'radial-gradient(circle at 30% 30%, rgba(107,138,208,0.08) 0%, rgba(8,11,20,0.6) 70%)',
@@ -77,14 +77,14 @@ function TimeUnitCard({ value, label, prevValue }: TimeUnitCardProps) {
 
         {/* Glass morphism inner card */}
         <div
-          className="relative z-10 flex h-24 w-24 flex-col items-center justify-center rounded-full backdrop-blur-md sm:h-28 sm:w-28"
+          className="relative z-10 flex h-18 w-18 flex-col items-center justify-center rounded-full backdrop-blur-md sm:h-21 sm:w-21"
           style={{
             background: 'rgba(8,11,20,0.7)',
             border: '1px solid rgba(107,138,208,0.15)',
           }}
         >
           <span
-            className="font-display text-3xl font-bold sm:text-4xl"
+            className="font-display text-2xl font-bold sm:text-3xl"
             style={{
               color: 'var(--text-primary)',
               transform: spinning ? 'rotateY(180deg)' : 'rotateY(0deg)',
