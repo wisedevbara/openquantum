@@ -30,7 +30,7 @@ export default function Home() {
           {/* Logo / Brand */}
           <div className="mb-8">
             <span className="font-orbitron text-sm tracking-widest text-cyan-400/80">
-              OPENQUANTUM
+              OPENQUANTUM.ID
             </span>
           </div>
 
@@ -45,12 +45,27 @@ export default function Home() {
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="font-inter mt-6 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg md:text-xl">
-            Mengguncang batas komputasi klasik. OpenQuantum hadir untuk membawa enkripsi
-            tahan kuantum dan pemrosesan data superposisi ke dalam genggaman Anda. Bersiaplah
-            menyaksikan lompatan kuantum berikutnya.
+          {/* Tagline */}
+          <p className="font-inter mt-6 max-w-2xl text-base leading-relaxed text-cyan-300/80 sm:text-lg md:text-xl">
+            Membangun Masa Depan Komputasi Kuantum Indonesia
           </p>
+
+          {/* Subtitle */}
+          <p className="font-inter mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg md:text-xl">
+            Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.
+          </p>
+
+          {/* Tech badges */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+            {['Next.js 15', 'React 19', 'Tailwind CSS 4'].map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
 
           {/* Countdown Timer */}
           <div className="mt-12 w-full max-w-3xl">
@@ -63,21 +78,29 @@ export default function Home() {
           <EmailSignup />
         </section>
 
-        {/* 3 Pillars Section */}
+        {/* 4 Pillars Section */}
         <section className="mt-20 w-full max-w-5xl">
-          <h2 className="font-orbitron mb-8 text-center text-2xl font-bold text-white sm:text-3xl">
-            Tiga Pilar Kuantum
+          <h2 className="font-orbitron mb-4 text-center text-2xl font-bold text-white sm:text-3xl">
+            🧬 Pilar Teknologi Kami
           </h2>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <p className="font-inter mx-auto mb-10 max-w-xl text-center text-sm text-gray-400 sm:text-base">
+            Empat pilar utama yang menjadi fondasi platform kami — dirancang untuk komputasi kuantum yang nyata dan aplikatif.
+          </p>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <PillarCard
               icon="🔮"
               title="Superposisi"
-              description="Banyak kemungkinan sekaligus. Dalam dunia kuantum, sebuah qubit bisa berada dalam banyak state secara bersamaan — membuka potensi komputasi yang tak terbatas."
+              description="Banyak kemungkinan sekaligus. Sebuah qubit bisa berada dalam banyak state secara bersamaan — membuka potensi komputasi yang tak terbatas."
             />
             <PillarCard
               icon="🔗"
               title="Entanglement"
-              description="Koneksi instan tanpa jarak. Dua qubit yang terentangle bisa saling mempengaruhi secara instan, di mana pun mereka berada — dasar komunikasi kuantum."
+              description="Koneksi instan tanpa jarak. Dua qubit yang terentangle saling mempengaruhi secara instan — fondasi komunikasi kuantum masa depan."
+            />
+            <PillarCard
+              icon="🛡️"
+              title="Enkripsi Kuantum"
+              description="Keamanan data generasi berikutnya. Enkripsi post-kuantum yang tahan serangan dari komputer kuantum — melindungi data Anda di masa depan."
             />
             <PillarCard
               icon="💎"
@@ -85,6 +108,49 @@ export default function Home() {
               description="Menuju stabilitas absolut. Kami menaklukkan dekohorensi untuk memastikan sistem kuantum tetap stabil dan reliabel dalam produksi."
             />
           </div>
+        </section>
+
+        {/* About Section */}
+        <section className="mt-24 w-full max-w-4xl">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md sm:p-12">
+            <h2 className="font-orbitron mb-6 text-center text-2xl font-bold text-white sm:text-3xl">
+              Tentang OpenQuantum.id
+            </h2>
+            <div className="space-y-4 text-center">
+              <p className="font-inter text-base leading-relaxed text-gray-300 sm:text-lg">
+                OpenQuantum.id adalah platform komputasi kuantum Indonesia yang berfokus pada riset dan pengembangan teknologi kuantum yang aplikatif.
+              </p>
+              <p className="font-inter text-base leading-relaxed text-gray-400 sm:text-lg">
+                Kami membangun solusi enkripsi tahan kuantum dan simulasi superposisi — dimulai dari Indonesia, untuk kontribusi global. Misi kami adalah membuat teknologi kuantum lebih mudah diakses oleh developer, peneliti, dan organisasi di seluruh dunia.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
+                {[
+                  '🔐 Kriptografi Post-Kuantum',
+                  '⚛️ Simulasi Kuantum',
+                  '🌐 Open Source',
+                  '🇮🇩 Buatan Indonesia',
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-amber-500/20 bg-amber-500/10 px-4 py-1.5 text-xs font-medium text-amber-400 sm:text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="mt-20 w-full max-w-2xl text-center">
+          <h2 className="font-orbitron mb-4 text-2xl font-bold text-white sm:text-3xl">
+            🚀 Siap Bergabung?
+          </h2>
+          <p className="font-inter mb-8 text-base text-gray-400 sm:text-lg">
+            Daftar sekarang dan jadilah yang pertama mengetahui saat platform kami resmi diluncurkan. Bersama, kita bangun masa depan komputasi kuantum Indonesia!
+          </p>
+          <EmailSignup />
         </section>
       </main>
 

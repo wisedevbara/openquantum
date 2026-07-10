@@ -21,3 +21,14 @@ model EmailSubscriber {
 
   @@map("email_subscribers")
 }
+
+// Site Settings - stores configurable values like launch date
+model SiteSettings {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     Json
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("site_settings")
+}

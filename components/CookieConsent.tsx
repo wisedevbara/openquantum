@@ -63,13 +63,13 @@ export default function CookieConsent() {
               onClick={handleDecline}
               className="rounded-lg border border-gray-600 px-4 py-2 text-sm text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
             >
-              Decline All
+              Tolak Semua
             </button>
             <button
               onClick={handleAccept}
               className="rounded-lg bg-gradient-to-r from-amber-400 to-amber-500 px-4 py-2 text-sm font-semibold text-gray-900 transition-all hover:from-amber-500 hover:to-amber-600"
             >
-              Accept All
+              Setujui Semua
             </button>
           </div>
         </div>

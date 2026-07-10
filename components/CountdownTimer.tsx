@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from 'react';
 
+// Default fallback: Dec 31, 2026 UTC
+const DEFAULT_LAUNCH_DATE = '2026-12-31T00:00:00.000Z';
+const REFRESH_INTERVAL_MS = 60_000; // 60 seconds
+
 interface TimeLeft {
   days: number;
   hours: number;
@@ -105,19 +109,52 @@ function TimeUnitCard({ value, label, prevValue }: TimeUnitCardProps) {
 }
 
 export default function CountdownTimer() {
-  const [target] = useState(() => Date.now() + 200 * 24 * 60 * 60 * 1000);
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => getTimeLeft(target));
+  const [targetMs, setTargetMs] = useState<number | null>(null);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [prevTimeLeft, setPrevTimeLeft] = useState<TimeLeft>(timeLeft);
 
+  // Fetch launch date from API
+  const fetchLaunchDate = async () => {
+    try {
+      const res = await fetch('/api/settings', { cache: 'no-store' });
+      if (!res.ok) throw new Error('Failed to fetch');
+      const data = await res.json();
+      const launchDate = data.launchDate || DEFAULT_LAUNCH_DATE;
+      const target = new Date(launchDate).getTime();
+      setTargetMs(target);
+    } catch {
+      // Fallback to default date
+      const target = new Date(DEFAULT_LAUNCH_DATE).getTime();
+      setTargetMs(target);
+    }
+  };
+
+  // Initial fetch + refresh every 60s
   useEffect(() => {
+    fetchLaunchDate();
+    const interval = setInterval(fetchLaunchDate, REFRESH_INTERVAL_MS);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Tick every second
+  useEffect(() => {
+    if (targetMs === null) return;
+
+    // Set initial value immediately
+    const initial = getTimeLeft(targetMs);
+    setTimeLeft(initial);
+    setPrevTimeLeft(initial);
+
     const interval = setInterval(() => {
-      const newTime = getTimeLeft(target);
-      setPrevTimeLeft(timeLeft);
-      setTimeLeft(newTime);
+      setTimeLeft((prev) => {
+        const newTime = getTimeLeft(targetMs);
+        setPrevTimeLeft(prev);
+        return newTime;
+      });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [target, timeLeft]);
+  }, [targetMs]);
 
   const units: TimeUnitCardProps[] = [
     { value: timeLeft.days, label: 'Hari', prevValue: prevTimeLeft.days },

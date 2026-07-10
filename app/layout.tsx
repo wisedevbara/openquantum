@@ -15,37 +15,40 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: 'OpenQuantum - Segera Hadir | Era Komputasi Kuantum',
+  title: 'OpenQuantum.id — Membangun Masa Depan Komputasi Kuantum Indonesia',
   description:
-    'OpenQuantum hadir untuk membawa enkripsi tahan kuantum dan pemrosesan data superposisi ke dalam genggaman Anda. Komputasi kuantum, keamanan masa depan, dan enkripsi post-kuantum.',
+    'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia. Komputasi kuantum, keamanan masa depan, dan enkripsi post-kuantum.',
   keywords: [
-    'quantum computing',
     'komputasi kuantum',
+    'quantum computing',
     'enkripsi kuantum',
     'post-quantum cryptography',
     'keamanan data',
     'openquantum',
     'superposisi',
     'entanglement',
+    'enkripsi tahan kuantum',
+    'simulasi kuantum',
+    'Indonesia',
   ],
-  authors: [{ name: 'OpenQuantum' }],
-  creator: 'OpenQuantum',
-  publisher: 'OpenQuantum',
+  authors: [{ name: 'OpenQuantum.id' }],
+  creator: 'OpenQuantum.id',
+  publisher: 'OpenQuantum.id',
   metadataBase: new URL('https://openquantum.id'),
   openGraph: {
     type: 'website',
     locale: 'id_ID',
     url: 'https://openquantum.id',
-    siteName: 'OpenQuantum',
-    title: 'OpenQuantum - Segera Hadir | Era Komputasi Kuantum',
+    siteName: 'OpenQuantum.id',
+    title: 'OpenQuantum.id — Membangun Masa Depan Komputasi Kuantum Indonesia',
     description:
-      'Mengguncang batas komputasi klasik. Enkripsi tahan kuantum dan pemrosesan data superposisi.',
+      'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OpenQuantum - Segera Hadir | Era Komputasi Kuantum',
+    title: 'OpenQuantum.id — Membangun Masa Depan Komputasi Kuantum Indonesia',
     description:
-      'Mengguncang batas komputasi klasik. Enkripsi tahan kuantum dan pemrosesan data superposisi.',
+      'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
   },
   robots: {
     index: true,
@@ -57,22 +60,22 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'OpenQuantum',
+  name: 'OpenQuantum.id',
   url: 'https://openquantum.id',
   description:
-    'OpenQuantum hadir untuk membawa enkripsi tahan kuantum dan pemrosesan data superposisi ke dalam genggaman Anda.',
+    'Platform komputasi kuantum Indonesia untuk enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
   sameAs: [],
 };
 
 const productJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'OpenQuantum Platform',
+  name: 'OpenQuantum.id Platform',
   description:
-    'Platform komputasi kuantum untuk enkripsi post-quantum dan pemrosesan data superposisi.',
+    'Platform komputasi kuantum Indonesia untuk enkripsi post-quantum dan simulasi superposisi.',
   brand: {
     '@type': 'Brand',
-    name: 'OpenQuantum',
+    name: 'OpenQuantum.id',
   },
   offers: {
     '@type': 'Offer',

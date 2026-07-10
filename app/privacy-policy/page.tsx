@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
             <ul className="mt-3 list-inside list-disc space-y-1 text-gray-400">
               <li>Alamat email (wajib)</li>
               <li>Nama (opsional)</li>
-              <li>Preferensi topik: Quantum Computing, Post-Quantum Cryptography, Quantum Machine Learning</li>
+              <li>Preferensi topik: Komputasi Kuantum, Kriptografi Post-Kuantum, Machine Learning Kuantum</li>
             </ul>
           </section>
 

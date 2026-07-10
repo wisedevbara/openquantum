@@ -122,9 +122,9 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
           <p className="mb-2 text-sm text-gray-400">Saya tertarik dengan:</p>
           <div className="space-y-2">
             {[
-              { key: 'quantum_computing' as const, label: 'Quantum Computing' },
-              { key: 'pqc' as const, label: 'Post-Quantum Cryptography' },
-              { key: 'qml' as const, label: 'Quantum Machine Learning' },
+              { key: 'quantum_computing' as const, label: 'Komputasi Kuantum' },
+              { key: 'pqc' as const, label: 'Kriptografi Post-Kuantum' },
+              { key: 'qml' as const, label: 'Machine Learning Kuantum' },
             ].map((pref) => (
               <label key={pref.key} className="flex cursor-pointer items-center gap-3">
                 <input
