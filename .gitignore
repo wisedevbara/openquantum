@@ -48,3 +48,44 @@ backups/
 *.pem
 *.key
 *.secret
+
+# Backups - never commit
+backups/
+*.sql.gz
+*.sql
+
+# Build artifacts
+.next/
+out/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Git backup
+doc/.git.backup/

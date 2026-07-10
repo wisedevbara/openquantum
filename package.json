@@ -1,16 +1,42 @@
 {
   "name": "openquantum",
   "version": "1.0.0",
+  "description": "OpenQuantum — Komputasi Kuantum untuk Masa Depan. Enkripsi tahan kuantum dan pemrosesan data superposisi.",
+  "author": "OpenQuantum Team",
+  "license": "MIT",
+  "homepage": "https://openquantum.id",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wisedevbara/openquantum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wisedevbara/openquantum/issues"
+  },
+  "keywords": [
+    "quantum-computing",
+    "post-quantum-cryptography",
+    "encryption",
+    "nextjs",
+    "react",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"No tests configured\"",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate deploy",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "db:seed": "prisma db seed",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "^15.3.3",
@@ -27,6 +53,17 @@
     "@tailwindcss/postcss": "^4.1.4",
     "prisma": "^6.10.1",
     "eslint": "^9.25.1",
-    "eslint-config-next": "^15.3.3"
+    "eslint-config-next": "^15.3.3",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
