@@ -18,7 +18,7 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: 'OpenQuantum.id — Platform Komputasi Kuantum Indonesia',
   description:
-    'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia. Komputasi kuantum, keamanan masa depan, dan enkripsi post-kuantum.',
+    'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia. Segera hadir. Daftar waitlist sekarang.',
   keywords: [
     'komputasi kuantum',
     'quantum computing',
@@ -31,11 +31,20 @@ export const metadata: Metadata = {
     'enkripsi tahan kuantum',
     'simulasi kuantum',
     'Indonesia',
+    'quantum computing Indonesia',
+    'enkripsi post-kuantum',
+    'quantum simulation',
   ],
   authors: [{ name: 'OpenQuantum.id' }],
   creator: 'OpenQuantum.id',
   publisher: 'OpenQuantum.id',
   metadataBase: new URL('https://openquantum.id'),
+  alternates: {
+    canonical: 'https://openquantum.id',
+    languages: {
+      'id': 'https://openquantum.id',
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'id_ID',
@@ -44,46 +53,70 @@ export const metadata: Metadata = {
     title: 'OpenQuantum.id — Platform Komputasi Kuantum Indonesia',
     description:
       'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
+    images: [
+      {
+        url: 'https://openquantum.id/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OpenQuantum.id — Komputasi Kuantum Indonesia',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'OpenQuantum.id — Platform Komputasi Kuantum Indonesia',
     description:
       'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
+    images: ['https://openquantum.id/og-image.png'],
   },
   robots: {
     index: true,
     follow: true,
   },
+  other: {
+    'theme-color': '#080b14',
+  },
 };
 
-// JSON-LD Structured Data
-const jsonLd = {
+// JSON-LD: Organization
+const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'OpenQuantum.id',
   url: 'https://openquantum.id',
+  logo: 'https://openquantum.id/favicon.svg',
   description:
-    'Platform komputasi kuantum Indonesia untuk enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
-  sameAs: [],
+    'Platform komputasi kuantum Indonesia untuk enkripsi tahan kuantum dan simulasi superposisi.',
+  sameAs: ['https://x.com/BaraMigSpace'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    availableLanguage: ['Indonesian', 'English'],
+  },
 };
 
-const productJsonLd = {
+// JSON-LD: WebSite
+const webSiteJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'OpenQuantum.id Platform',
-  description:
-    'Platform komputasi kuantum Indonesia untuk enkripsi post-quantum dan simulasi superposisi.',
-  brand: {
-    '@type': 'Brand',
-    name: 'OpenQuantum.id',
+  '@type': 'WebSite',
+  name: 'OpenQuantum.id',
+  url: 'https://openquantum.id',
+  description: 'Platform komputasi kuantum Indonesia',
+  inLanguage: 'id',
+};
+
+// JSON-LD: EducationalOrganization (non-komersial edukatif)
+const educationalJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'OpenQuantum.id',
+  url: 'https://openquantum.id',
+  description: 'Platform edukasi komputasi kuantum Indonesia',
+  areaServed: {
+    '@type': 'Country',
+    name: 'Indonesia',
   },
-  offers: {
-    '@type': 'Offer',
-    availability: 'https://schema.org/PreOrder',
-    priceCurrency: 'IDR',
-    price: '0',
-  },
+  knowsLanguage: ['id', 'en'],
 };
 
 export default function RootLayout({
@@ -98,11 +131,15 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalJsonLd) }}
         />
       </head>
       <body className="antialiased">{children}</body>

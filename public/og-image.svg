@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1c2859;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#35498a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#080b14"/>
+  <text x="600" y="280" text-anchor="middle" font-family="monospace" font-size="24" fill="#6b8ad0" letter-spacing="8">OPENQUANTUM.ID</text>
+  <text x="600" y="380" text-anchor="middle" font-family="monospace" font-size="64" font-weight="bold" fill="#e2e8f0">SEGERA HADIR</text>
+  <rect x="450" y="420" width="300" height="4" fill="url(#grad)" rx="2"/>
+  <circle cx="600" cy="422" r="6" fill="#35498a"/>
+  <text x="600" y="480" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6b8ad0">Platform Komputasi Kuantum Indonesia</text>
+  <text x="600" y="520" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f080">Buatan Indonesia, untuk dunia.</text>
+</svg>
