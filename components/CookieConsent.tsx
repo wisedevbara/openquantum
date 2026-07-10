@@ -45,14 +45,14 @@ export default function CookieConsent() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-gray-900/95 backdrop-blur-md transition-all duration-300 ${
+      className={`fixed bottom-0 left-0 right-0 z-50 border-t border-cherenkov-mid/10 bg-void/95 backdrop-blur-md transition-all duration-300 ${
         animate ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 py-4">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           {/* Message */}
-          <p className="font-inter max-w-2xl text-sm text-gray-400">
+          <p className="font-body max-w-2xl text-sm text-photon/40">
             Kami menggunakan cookie untuk meningkatkan pengalaman Anda. Dengan
             mengklik Accept, Anda setuju dengan penggunaan cookie analytics.
           </p>
@@ -61,13 +61,13 @@ export default function CookieConsent() {
           <div className="flex shrink-0 gap-3">
             <button
               onClick={handleDecline}
-              className="rounded-lg border border-gray-600 px-4 py-2 text-sm text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
+              className="rounded-lg border border-cherenkov-mid/20 px-4 py-2 text-sm text-photon/60 transition-colors hover:border-cherenkov-mid/40 hover:text-photon"
             >
               Tolak Semua
             </button>
             <button
               onClick={handleAccept}
-              className="rounded-lg bg-gradient-to-r from-amber-400 to-amber-500 px-4 py-2 text-sm font-semibold text-gray-900 transition-all hover:from-amber-500 hover:to-amber-600"
+              className="rounded-lg bg-cherenkov-bright px-4 py-2 text-sm font-semibold text-void transition-all hover:bg-cherenkov-mid"
             >
               Setujui Semua
             </button>

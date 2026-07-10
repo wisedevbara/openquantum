@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#030712] via-[#0F0A2A] to-[#1B0B3B]">
+    <main className="min-h-screen bg-gradient-to-br from-void-900 via-void-800 to-void-700">
       <div className="mx-auto max-w-3xl px-6 py-16">
         {/* Header */}
         <Link
@@ -15,12 +15,12 @@ export default function PrivacyPolicy() {
           Kembali ke Beranda
         </Link>
 
-        <h1 className="font-orbitron mb-2 text-3xl font-bold text-white">Kebijakan Privasi</h1>
+        <h1 className="font-display mb-2 text-3xl font-bold text-white">Kebijakan Privasi</h1>
         <p className="mb-8 text-sm text-gray-500">Terakhir diperbarui: 8 Juli 2026</p>
 
         <div className="space-y-8 text-gray-300">
           <section>
-            <h2 className="font-orbitron mb-3 text-xl font-semibold text-white">
+            <h2 className="font-display mb-3 text-xl font-semibold text-white">
               1. Informasi yang Kami Kumpulkan
             </h2>
             <p className="font-inter leading-relaxed">
@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-orbitron mb-3 text-xl font-semibold text-white">
+            <h2 className="font-display mb-3 text-xl font-semibold text-white">
               2. Bagaimana Kami Menggunakan Informasi
             </h2>
             <p className="font-inter leading-relaxed">
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-orbitron mb-3 text-xl font-semibold text-white">
+            <h2 className="font-display mb-3 text-xl font-semibold text-white">
               3. Berbagi Informasi
             </h2>
             <p className="font-inter leading-relaxed">
@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-orbitron mb-3 text-xl font-semibold text-white">
+            <h2 className="font-display mb-3 text-xl font-semibold text-white">
               4. Keamanan Data
             </h2>
             <p className="font-inter leading-relaxed">
@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-orbitron mb-3 text-xl font-semibold text-white">
+            <h2 className="font-display mb-3 text-xl font-semibold text-white">
               5. Hak Anda
             </h2>
             <p className="font-inter leading-relaxed">
@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-orbitron mb-3 text-xl font-semibold text-white">
+            <h2 className="font-display mb-3 text-xl font-semibold text-white">
               6. Hubungi Kami
             </h2>
             <p className="font-inter leading-relaxed">

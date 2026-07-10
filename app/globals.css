@@ -1,18 +1,63 @@
 @import "tailwindcss";
 
+/* ========================================
+   Tailwind CSS v4 Theme — Cherenkov Design Tokens
+   ======================================== */
+@theme {
+  /* Cherenkov Palette */
+  --color-cherenkov-deep: #1c2859;
+  --color-cherenkov-mid: #35498a;
+  --color-cherenkov-bright: #4a7bff;
+  --color-cherenkov-glow: #6b9aff;
+
+  /* Void — deep space backgrounds */
+  --color-void-900: #05050f;
+  --color-void-800: #0a0a1a;
+  --color-void-700: #10102a;
+  --color-void-600: #181838;
+
+  /* Photon — accent / energy highlights */
+  --color-photon: #00e5ff;
+  --color-photon-secondary: #7c4dff;
+  --color-photon-warm: #ffab40;
+
+  /* Typography colors */
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #6b7280;
+}
+
+/* ========================================
+   Cherenkov Design System — OpenQuantum.id
+   ========================================
+   Palette inspired by Cherenkov radiation:
+   the blue glow of particles traveling faster
+   than light in a medium. Deep navy → electric blue.
+   ======================================== */
+
 :root {
-  /* Quantum Color Palette */
-  --deep-space-1: #030712;
-  --deep-space-2: #0F0A2A;
-  --deep-space-3: #1B0B3B;
-  --electro-gold: #FBBF24;
-  --electro-gold-dark: #F59E0B;
-  --quantum-cyan: #22D3EE;
-  --quantum-cyan-dark: #06B6D4;
-  --neon-violet: #8B5CF6;
-  --text-primary: #F9FAFB;
-  --text-secondary: #9CA3AF;
-  --text-muted: #6B7280;
+  /* Cherenkov Palette */
+  --cherenkov-deep: #1c2859;
+  --cherenkov-mid: #35498a;
+  --cherenkov-bright: #4a7bff;
+  --cherenkov-glow: #6b9aff;
+
+  /* Void — deep space backgrounds */
+  --void-900: #05050f;
+  --void-800: #0a0a1a;
+  --void-700: #10102a;
+  --void-600: #181838;
+
+  /* Photon — accent / energy highlights */
+  --photon-primary: #00e5ff;
+  --photon-secondary: #7c4dff;
+  --photon-warm: #ffab40;
+
+  /* Typography colors */
+  --text-primary: #f0f0f5;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-photon: #00e5ff;
 }
 
 /* Global Styles */
@@ -27,7 +72,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, var(--deep-space-1) 0%, var(--deep-space-2) 50%, var(--deep-space-3) 100%);
+  background: var(--void-900);
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
@@ -35,17 +80,93 @@ body {
 
 /* Selection Colors */
 ::selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(74, 123, 255, 0.3);
   color: white;
 }
 
+/* Focus ring — Cherenkov glow for keyboard nav */
+:focus-visible {
+  outline: 2px solid var(--cherenkov-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(74, 123, 255, 0.4);
+}
+
 /* Font Utility Classes */
-.font-orbitron {
-  font-family: var(--font-orbitron), 'Orbitron', sans-serif;
+.font-space-mono {
+  font-family: var(--font-space-mono), 'Space Mono', monospace;
 }
 
 .font-inter {
   font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+/* Alias utilities — used by page components */
+.font-display {
+  font-family: var(--font-space-mono), 'Space Mono', monospace;
+}
+
+.font-body {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+.card-surface {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.measurement-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cherenkov-bright);
+  box-shadow: 0 0 8px rgba(74, 123, 255, 0.6);
+}
+
+@keyframes measurement-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(74, 123, 255, 0.6);
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(74, 123, 255, 1);
+    opacity: 1;
+  }
+}
+
+.animate-measurement-glow {
+  animation: measurement-glow 2s ease-in-out infinite;
+}
+
+/* Cherenkov measurement line */
+.measurement-line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cherenkov-deep), var(--cherenkov-mid));
+  margin: 1.5rem auto;
+  border-radius: 1px;
+}
+
+.measurement-line-wide {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cherenkov-deep), var(--cherenkov-mid), transparent);
+  margin: 2rem auto;
+}
+
+/* Card hover glow — Cherenkov */
+.card-cherenkov {
+  border: 1px solid rgba(28, 40, 89, 0.5);
+  background: rgba(5, 5, 15, 0.6);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.card-cherenkov:hover {
+  border-color: rgba(53, 73, 138, 0.8);
+  box-shadow: 0 0 30px rgba(74, 123, 255, 0.15),
+              0 0 60px rgba(53, 73, 138, 0.1);
 }
 
 /* Scrollbar Styling */
@@ -54,11 +175,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--deep-space-1);
+  background: var(--void-900);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--neon-violet);
+  background: var(--cherenkov-mid);
   border-radius: 3px;
 }
 

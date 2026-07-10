@@ -56,14 +56,14 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
 
   if (status === 'success') {
     return (
-      <div className="rounded-2xl border border-cyan-500/30 bg-white/5 p-8 text-center backdrop-blur-md">
+      <div className="card-surface rounded-2xl p-8 text-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-500/20">
           <svg className="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <p className="font-inter text-lg text-white">Terima kasih!</p>
-        <p className="mt-2 text-sm text-gray-400">Anda akan menjadi yang pertama tahu.</p>
+        <p className="font-body text-lg text-photon">Terima kasih!</p>
+        <p className="mt-2 text-sm text-photon/40">Anda akan menjadi yang pertama tahu.</p>
       </div>
     );
   }
@@ -71,7 +71,7 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto w-full max-w-lg rounded-2xl border border-cyan-500/30 bg-white/5 p-6 backdrop-blur-md md:p-8"
+      className="card-surface mx-auto w-full max-w-lg rounded-2xl p-6 md:p-8"
     >
       {/* Honeypot - hidden from humans */}
       <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
@@ -88,23 +88,23 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
       <div className="space-y-4">
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="mb-1 block text-sm text-gray-400">
-            Nama <span className="text-gray-600">(opsional)</span>
+          <label htmlFor="name" className="mb-1 block text-sm text-photon/40">
+            Nama <span className="text-photon/30">(opsional)</span>
           </label>
           <input
             id="name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors focus:border-cyan-500"
+            className="w-full rounded-lg border border-cherenkov-mid/20 bg-void/50 px-4 py-3 text-photon placeholder-photon/30 outline-none transition-colors focus:border-cherenkov-bright"
             placeholder="Nama Anda"
           />
         </div>
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm text-gray-400">
-            Email <span className="text-amber-400">*</span>
+          <label htmlFor="email" className="mb-1 block text-sm text-photon/40">
+            Email <span className="text-cherenkov-bright">*</span>
           </label>
           <input
             id="email"
@@ -112,14 +112,14 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors focus:border-cyan-500"
+            className="w-full rounded-lg border border-cherenkov-mid/20 bg-void/50 px-4 py-3 text-photon placeholder-photon/30 outline-none transition-colors focus:border-cherenkov-bright"
             placeholder="email@contoh.com"
           />
         </div>
 
         {/* Preferences */}
         <div>
-          <p className="mb-2 text-sm text-gray-400">Saya tertarik dengan:</p>
+          <p className="mb-2 text-sm text-photon/40">Saya tertarik dengan:</p>
           <div className="space-y-2">
             {[
               { key: 'quantum_computing' as const, label: 'Komputasi Kuantum' },
@@ -133,9 +133,9 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
                   onChange={(e) =>
                     setPreferences((prev) => ({ ...prev, [pref.key]: e.target.checked }))
                   }
-                  className="h-4 w-4 rounded border-gray-600 bg-gray-800 text-amber-400 focus:ring-amber-400"
+                  className="h-4 w-4 rounded border-cherenkov-mid/30 bg-void text-cherenkov-bright focus:ring-cherenkov-bright"
                 />
-                <span className="text-sm text-gray-300">{pref.label}</span>
+                <span className="text-sm text-photon/70">{pref.label}</span>
               </label>
             ))}
           </div>
@@ -152,7 +152,7 @@ export default function EmailSignup({ onSuccess }: EmailSignupProps) {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full rounded-lg bg-gradient-to-r from-amber-400 to-cyan-400 px-6 py-3 font-semibold text-gray-900 transition-all hover:from-amber-500 hover:to-cyan-500 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50"
+          className="w-full rounded-lg bg-cherenkov-bright px-6 py-3 font-semibold text-void transition-all hover:bg-cherenkov-mid hover:shadow-lg hover:shadow-cherenkov-bright/25 disabled:opacity-50"
         >
           {status === 'loading' ? (
             <span className="flex items-center justify-center gap-2">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Orbitron } from 'next/font/google';
+import { Inter, Space_Mono } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
@@ -8,14 +8,15 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const orbitron = Orbitron({
+const spaceMono = Space_Mono({
   subsets: ['latin'],
+  weight: ['400', '700'],
   display: 'swap',
-  variable: '--font-orbitron',
+  variable: '--font-space-mono',
 });
 
 export const metadata: Metadata = {
-  title: 'OpenQuantum.id — Membangun Masa Depan Komputasi Kuantum Indonesia',
+  title: 'OpenQuantum.id — Platform Komputasi Kuantum Indonesia',
   description:
     'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia. Komputasi kuantum, keamanan masa depan, dan enkripsi post-kuantum.',
   keywords: [
@@ -40,13 +41,13 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: 'https://openquantum.id',
     siteName: 'OpenQuantum.id',
-    title: 'OpenQuantum.id — Membangun Masa Depan Komputasi Kuantum Indonesia',
+    title: 'OpenQuantum.id — Platform Komputasi Kuantum Indonesia',
     description:
       'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OpenQuantum.id — Membangun Masa Depan Komputasi Kuantum Indonesia',
+    title: 'OpenQuantum.id — Platform Komputasi Kuantum Indonesia',
     description:
       'Platform enkripsi tahan kuantum dan simulasi superposisi — buatan Indonesia, untuk dunia.',
   },
@@ -91,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={`${inter.variable} ${orbitron.variable}`}>
+    <html lang="id" className={`${inter.variable} ${spaceMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />

@@ -2,7 +2,8 @@
 
 import { useRef, useEffect, useCallback } from 'react';
 
-const COLORS = ['#FBBF24', '#22D3EE', '#8B5CF6'] as const;
+// Cherenkov palette particle colors
+const COLORS = ['#6b9aff', '#35498a', '#4a7bff', '#00e5ff'] as const;
 const MOUSE_RADIUS = 150;
 const CONNECTION_DISTANCE = 200;
 const DESKTOP_COUNT = 80;
@@ -224,7 +225,7 @@ export default function QuantumParticles() {
         // Inner bright core
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius * 0.4, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha * 0.8})`;
+        ctx.fillStyle = `rgba(226, 232, 240, ${p.alpha * 0.8})`;
         ctx.fill();
       }
 
@@ -301,7 +302,7 @@ function drawFrame(
 
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius * 0.4, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha * 0.8})`;
+    ctx.fillStyle = `rgba(226, 232, 240, ${p.alpha * 0.8})`;
     ctx.fill();
   }
 }

@@ -1,29 +1,37 @@
 'use client';
 
+import type { ReactNode } from 'react';
+
 interface PillarCardProps {
-  icon?: string;
-  title?: string;
-  description?: string;
+  icon?: ReactNode;
+  title: string;
+  description: string;
 }
 
 export default function PillarCard({
-  icon = '🔮',
-  title = 'Superposisi',
-  description = 'Banyak kemungkinan sekaligus',
+  icon,
+  title,
+  description,
 }: PillarCardProps) {
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/50 hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-500/10">
+    <div className="card-cherenkov group flex flex-col rounded-2xl p-6 transition-all duration-300">
       {/* Icon */}
-      <div className="mb-4 text-4xl">{icon}</div>
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--cherenkov-deep)]/30 text-[var(--cherenkov-bright)] transition-colors duration-300 group-hover:bg-[var(--cherenkov-mid)]/40">
+        {icon}
+      </div>
 
       {/* Title */}
-      <h3 className="font-orbitron mb-2 text-lg font-bold text-white">{title}</h3>
+      <h3 className="font-space-mono mb-2 text-lg font-bold text-[var(--text-primary)]">
+        {title}
+      </h3>
 
       {/* Description */}
-      <p className="font-inter text-sm leading-relaxed text-gray-400">{description}</p>
+      <p className="font-inter flex-1 text-sm leading-relaxed text-[var(--text-secondary)]">
+        {description}
+      </p>
 
-      {/* Decorative glow line */}
-      <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      {/* Measurement line — visible on hover */}
+      <div className="mt-4 measurement-line-wide opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
   );
 }

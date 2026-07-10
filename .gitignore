@@ -89,3 +89,5 @@ pids/
 
 # Git backup
 doc/.git.backup/
+
+.next.bak/

@@ -2,11 +2,11 @@
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/20 py-8">
+    <footer className="border-t border-cherenkov-mid/10 bg-void/20 py-8">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Copyright */}
-          <p className="font-inter text-sm text-gray-500">
+          <p className="font-body text-sm text-photon/40">
             © 2026 OpenQuantum.id. Hak cipta dilindungi.
           </p>
 
@@ -17,7 +17,7 @@ export default function Footer() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 transition-colors hover:text-white"
+              className="text-photon/40 transition-colors hover:text-photon"
               aria-label="Ikuti kami di X"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ export default function Footer() {
             {/* Privacy Policy */}
             <a
               href="/privacy-policy"
-              className="text-sm text-gray-500 transition-colors hover:text-white"
+              className="font-body text-sm text-photon/40 transition-colors hover:text-photon"
             >
               Kebijakan Privasi
             </a>

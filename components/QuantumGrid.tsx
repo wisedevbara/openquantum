@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-
 export default function QuantumGrid() {
   const [reducedMotion, setReducedMotion] = useState(false);
 
@@ -22,10 +21,10 @@ export default function QuantumGrid() {
       className="pointer-events-none fixed inset-0 z-[-1]"
       aria-hidden="true"
       style={{
-        // CSS grid pattern background
+        // CSS grid pattern background — using Cherenkov palette
         backgroundImage: `
-          linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px)
+          linear-gradient(rgba(107, 138, 208, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(107, 138, 208, 0.04) 1px, transparent 1px)
         `,
         backgroundSize: '60px 60px',
         backgroundPosition: 'center center',
@@ -39,8 +38,8 @@ export default function QuantumGrid() {
             radial-gradient(
               ellipse 80% 60% at 50% 50%,
               transparent 30%,
-              rgba(3, 7, 18, 0.4) 70%,
-              rgba(3, 7, 18, 0.85) 100%
+              rgba(8, 11, 20, 0.4) 70%,
+              rgba(8, 11, 20, 0.85) 100%
             )
           `,
         }}
@@ -53,7 +52,7 @@ export default function QuantumGrid() {
           background: `
             radial-gradient(
               circle at 50% 50%,
-              rgba(34, 211, 238, 0.03) 0%,
+              rgba(107, 138, 208, 0.03) 0%,
               transparent 50%
             )
           `,
@@ -69,9 +68,9 @@ export default function QuantumGrid() {
             linear-gradient(
               180deg,
               transparent 0%,
-              rgba(139, 92, 246, 0.02) 25%,
+              rgba(53, 73, 138, 0.02) 25%,
               transparent 50%,
-              rgba(34, 211, 238, 0.02) 75%,
+              rgba(107, 138, 208, 0.02) 75%,
               transparent 100%
             )
           `,

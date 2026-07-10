@@ -50,43 +50,43 @@ function TimeUnitCard({ value, label, prevValue }: TimeUnitCardProps) {
     <div className="relative flex flex-col items-center">
       {/* Bloch Sphere container with rotating border */}
       <div
-        className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full flex items-center justify-center"
+        className="relative flex h-28 w-28 items-center justify-center rounded-full sm:h-32 sm:w-32"
         style={{
           background:
-            'radial-gradient(circle at 30% 30%, rgba(34,211,238,0.08) 0%, rgba(3,7,18,0.6) 70%)',
+            'radial-gradient(circle at 30% 30%, rgba(107,138,208,0.08) 0%, rgba(8,11,20,0.6) 70%)',
           boxShadow:
-            '0 0 30px rgba(34,211,238,0.1), inset 0 0 30px rgba(139,92,246,0.05)',
+            '0 0 30px rgba(107,138,208,0.1), inset 0 0 30px rgba(28,40,89,0.05)',
         }}
       >
         {/* Rotating border ring */}
         <div
-          className="absolute inset-0 rounded-full animate-spin"
+          className="absolute inset-0 animate-spin rounded-full"
           style={{
             background:
-              'conic-gradient(from 0deg, rgba(34,211,238,0.6), rgba(251,191,36,0.4), rgba(139,92,246,0.5), rgba(34,211,238,0.6))',
+              'conic-gradient(from 0deg, rgba(107,138,208,0.6), rgba(53,73,138,0.4), rgba(28,40,89,0.5), rgba(107,138,208,0.6))',
             padding: '2px',
             borderRadius: '50%',
             animationDuration: '8s',
           }}
         >
           <div
-            className="w-full h-full rounded-full"
-            style={{ background: 'linear-gradient(135deg, #030712 0%, #0F0A2A 100%)' }}
+            className="h-full w-full rounded-full"
+            style={{ background: 'linear-gradient(135deg, var(--void-900) 0%, var(--void-700) 100%)' }}
           />
         </div>
 
         {/* Glass morphism inner card */}
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full backdrop-blur-md"
+          className="relative z-10 flex h-24 w-24 flex-col items-center justify-center rounded-full backdrop-blur-md sm:h-28 sm:w-28"
           style={{
-            background: 'rgba(3,7,18,0.7)',
-            border: '1px solid rgba(34,211,238,0.15)',
+            background: 'rgba(8,11,20,0.7)',
+            border: '1px solid rgba(107,138,208,0.15)',
           }}
         >
           <span
-            className="font-orbitron text-3xl sm:text-4xl font-bold"
+            className="font-display text-3xl font-bold sm:text-4xl"
             style={{
-              color: '#FBBF24',
+              color: 'var(--text-primary)',
               transform: spinning ? 'rotateY(180deg)' : 'rotateY(0deg)',
               transition: 'transform 0.5s ease-out',
               display: 'inline-block',
@@ -98,9 +98,8 @@ function TimeUnitCard({ value, label, prevValue }: TimeUnitCardProps) {
       </div>
 
       {/* Label */}
-      <span
-        className="mt-3 font-orbitron text-xs sm:text-sm tracking-widest uppercase"
-        style={{ color: '#22D3EE' }}
+      <span className="font-display mt-3 text-xs tracking-widest uppercase sm:text-sm"
+        style={{ color: 'var(--cherenkov-glow)' }}
       >
         {label}
       </span>
@@ -164,7 +163,7 @@ export default function CountdownTimer() {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 place-items-center">
+    <div className="grid grid-cols-2 place-items-center gap-4 sm:gap-6 md:grid-cols-4 md:gap-8">
       {units.map((unit) => (
         <TimeUnitCard
           key={unit.label}
