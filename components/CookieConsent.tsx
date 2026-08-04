@@ -83,3 +83,5 @@ declare global {
     gtag: (...args: unknown[]) => void;
   }
 }
+
+// [hermes-maint] 2026-08-04 10:36 WIB — chore: annotate code maintenance
