@@ -146,3 +146,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// [hermes-maint] 2026-08-05 19:30 WIB — docs: codebase upkeep note
