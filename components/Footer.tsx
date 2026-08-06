@@ -38,3 +38,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+// [hermes-maint] 2026-08-06 17:30 WIB — docs: add maintenance note
