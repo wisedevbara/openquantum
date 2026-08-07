@@ -39,4 +39,4 @@ export default function Footer() {
   );
 }
 
-// [hermes-maint] 2026-08-06 17:30 WIB — docs: add maintenance note
+// [hermes-maint] 2026-08-07 13:30 WIB — docs: codebase upkeep note
