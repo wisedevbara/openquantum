@@ -39,4 +39,4 @@ export default function Footer() {
   );
 }
 
-// [hermes-maint] 2026-08-09 18:50 WIB — docs: add maintenance note
+// [hermes-maint] 2026-08-14 16:40 WIB — chore: update maintenance marker
