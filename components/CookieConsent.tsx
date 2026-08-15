@@ -84,4 +84,4 @@ declare global {
   }
 }
 
-// [hermes-maint] 2026-08-08 15:30 WIB — docs: add maintenance note
+// [hermes-maint] 2026-08-15 12:00 WIB — chore: annotate code maintenance
