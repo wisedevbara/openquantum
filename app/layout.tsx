@@ -147,4 +147,4 @@ export default function RootLayout({
   );
 }
 
-// [hermes-maint] 2026-08-25 19:00 WIB — chore: annotate code maintenance
+// [hermes-maint] 2026-08-28 18:50 WIB — docs: add maintenance note
